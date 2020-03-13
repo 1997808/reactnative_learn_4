@@ -11,7 +11,7 @@ const fetchFonts = () => {
 }
 
 export default function App() {
-  const [fontLoaded, setFontLoaded] = useDate(false)
+  const [fontLoaded, setFontLoaded] = useState(false)
 
   if (!fontLoaded) {
     return (
@@ -21,7 +21,6 @@ export default function App() {
       />
     )
   }
-
 
   return (
     <View style={styles.container}>
