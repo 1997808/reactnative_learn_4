@@ -1,6 +1,5 @@
 import React from 'react'
 import { View, Text, Button, StyleSheet } from 'react-native'
-import CategoryMealsScreen from './CategoryMealsScreen'
 
 const CategoriesScreen = props => {
   // console.log(props)
@@ -9,6 +8,8 @@ const CategoriesScreen = props => {
       <Text>The Categories Screen</Text>
       <Button title="Go to Meal" onPress={() => {
         props.navigation.navigate({ routeName: 'CategoryMeals' })
+        // props.navigation.push('CategoryMeals') for the same screen with different data
+        // props.navigation.replace('CategoryMeals') for login 
       }} />
     </View>
   )
