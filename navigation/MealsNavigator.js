@@ -77,11 +77,27 @@ const MealsFavTabNavigator =
 
 const FiltersNavigation = createStackNavigator({
   Filters: FiltersScreen
+}, {
+  // navigationOptions: {
+  //   drawerLabel: 'Filters!!!'
+  // },
+  defaultNavigationOptions: defaultStackNavOptions
 })
 
 const MainNavigator = createDrawerNavigator({
-  MealsFavs: MealsFavTabNavigator,
+  MealsFavs: {
+    screen: MealsFavTabNavigator, navigationOptions: {
+      drawerLabel: 'Meals'
+    }
+  },
   Filters: FiltersNavigation
+}, {
+  contentOptions: {
+    activeTintColor: Colors.accentColor,
+    labelStyle: {
+      fontFamily: 'open-sans-bold'
+    }
+  }
 })
 
 export default createAppContainer(MainNavigator)
