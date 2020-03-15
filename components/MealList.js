@@ -5,7 +5,6 @@ import MealItem from './MealItem'
 
 const MealList = props => {
   const renderMealItem = itemData => {
-    console.log('MealLIST', itemData)
     return (
       <MealItem
         title={itemData.item.title}

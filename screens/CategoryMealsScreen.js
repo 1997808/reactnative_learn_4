@@ -9,7 +9,6 @@ const CategoryMealsScreen = props => {
   const displayedMeals = MEALS.filter(
     meal => meal.categoryIds.indexOf(catId) >= 0
   )
-  console.log('catScreen', displayedMeals)
 
   return <MealList listData={displayedMeals} navigation={props.navigation} />
 }
