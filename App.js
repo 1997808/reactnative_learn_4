@@ -6,7 +6,7 @@ import { useScreens } from 'react-native-screens'
 
 import MealsNavigator from './navigation/MealsNavigator'
 
-useScreens()
+// useScreens()
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -31,7 +31,3 @@ export default function App() {
     <MealsNavigator />
   );
 }
-
-const styles = StyleSheet.create({
-
-});
